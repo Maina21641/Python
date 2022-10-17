@@ -85,5 +85,5 @@ def f(x):
         return 23      # print(type(f(arg))) = <class 'int'>
     else:
         return         # print(type(f(arg))) = <class 'NoneType'>
-arg = 2.3 
-print(type(f(arg)))
+# arg = 2.3 
+# print(type(f(arg)))
