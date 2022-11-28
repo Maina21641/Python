@@ -1,32 +1,20 @@
 from telegram import Update
-from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
+from telegram.ext import *
 from bot_commands import *
 
-
 app = ApplicationBuilder().token("5981406390:AAH-ywFKZArLDArOfGAXI0yroiy8qw-FLi8").build()
+# Создание объекта Бот
+# application = Application.builder().token("здесь ваш токен").build()
 
+# Регистрация обработчика на текстовые сообщения, но не команды
+# app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, echo))
 app.add_handler(CommandHandler("hi", hi_command))
 app.add_handler(CommandHandler("time", time_command))
 app.add_handler(CommandHandler("help", help_command))
 app.add_handler(CommandHandler("sum", sum_command))
-
+app.add_handler(CommandHandler("1_Print_all_base", print_all_to_console))
+app.add_handler(CommandHandler("2_Search_entry", search_entry))
+app.add_handler(CommandHandler("3_Edit_entry", edit_entry))
 
 print("Server start")
 app.run_polling()
-
-# import emoji   
-
-# print(emoji.emojize('Python is :thumbs_up:'))
-
-# from progress.bar import Bar
-# import time
-# bar = Bar('Processing', max=20)
-# for i in range(20):
-#     time.sleep(1)
-#     bar.next()
-# bar.finish()
-
-# from isOdd import isOdd
-
-# print(isOdd(1))
-# print(isOdd(5))
