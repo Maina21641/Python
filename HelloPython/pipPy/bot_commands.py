@@ -1,9 +1,7 @@
+import time
 from telegram import Update
 from telegram.ext import *
 import datetime
-
-# async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-#     await update.message.reply_text(update.message.text)
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
   
@@ -62,10 +60,12 @@ async def edit_entry(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None
                         lines += line
                     else:
                         line = line.split(", ")
-                        # print(line)
+                        print(line)
                         # old = int(input("Укажите номер элемента (1-5) для замены: "))
-                        old = await update.message.reply_text(f"Укажите номер элемента (1-5) для замены: ")
+                        old = int(await update.message.reply_text(f"Укажите номер элемента (1-7) для замены: "))
+                        time.sleep(10)
                         new = await update.message.reply_text(f"На что заменить: ")
+                        time.sleep(10)
                         line[old - 1] = new
                         line = ", ".join(line)
                         lines += line

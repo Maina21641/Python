@@ -11,7 +11,7 @@ def Edit_Entry(file):
                 else:
                     line = line.split(", ")
                     print(line)
-                    old = int(input("Укажите номер элемента (1-5) для замены: "))
+                    old = int(input("Укажите номер элемента (1-7) для замены: "))
                     new = input("На что заменить: ")
                     line[old - 1] = new
                     line = ", ".join(line)

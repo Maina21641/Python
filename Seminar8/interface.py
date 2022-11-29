@@ -15,10 +15,10 @@ while True:
     #     # add.reading
     #     write.New_Entry
     elif value == 3:
-        search.Search_Entry('HomeWork8\\employees.csv')
+        search.Search_Entry('Seminar8\\employees.csv')
     elif value == 4:
-        edit.Edit_Entry('HomeWork8\\employees.csv')
+        edit.Edit_Entry('Seminar8\\employees.csv')
     elif value == 5:
-        delete.delete_str('HomeWork8\\employees.csv')
+        delete.delete_str('Seminar8\\employees.csv')
     elif value == 6:
         break
