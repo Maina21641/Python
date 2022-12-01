@@ -5,7 +5,7 @@ import telebot
 from telebot import types
 from telegram import ReplyKeyboardMarkup, KeyboardButton
 
-bot = telebot.TeleBot("5734750462:AAGVLmbk-P3_UgEH4cu0M14AX0EYAdu-4wg", parse_mode=None)
+bot = telebot.TeleBot("БуквыЦифры", parse_mode=None)
 
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
