@@ -1,9 +1,9 @@
-import io
+# import io
 from telebot import types
 import telebot
 import HtmlFormat as html
 
-bot = telebot.TeleBot("5734750462:AAGVLmbk-P3_UgEH4cu0M14AX0EYAdu-4wg")
+bot = telebot.TeleBot("ТутТвойТокен")
 
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
@@ -173,13 +173,6 @@ def delete(message):
         data.writelines(lines)
     with open('HomeWork9\\3PhoneBookBotTelegramm\\Phonebook.csv', 'w', encoding="utf-8") as data:
         data.writelines(lines)
-    # import fileinput
-    # for line in fileinput.FileInput("HomeWork9\\3PhoneBookBotTelegramm\\Phonebook.txt",inplace=1):
-    #     if line.rstrip():
-    #         print(line)
-    # for line in fileinput.FileInput("HomeWork9\\3PhoneBookBotTelegramm\\Phonebook.csv",inplace=1):
-    #     if line.rstrip():
-    #         print(line)
     html.GoToHtml()
     bot.send_message(message.from_user.id, "Удаление произведено."
     "\nЧто делать дальше?"
